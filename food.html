@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KK's Food Blog</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Your Custom CSS (optional) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header with Bootstrap Navbar -->
+<header>
+    <div class="container">
+            <h1 class="scroll-title"><span>Welcome to KK's Food Blog</span></h1>
+    </div>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <!-- <a class="navbar-brand" href="#">KK's Food Blog</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#latest-posts">Latest Posts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#popular-recipes">Popular Recipes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Main Content Section -->
+<main class="container my-5">
+
+    <!-- About Section -->
+    <section id="about" class="mb-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>About Me</h2>
+                <p>I'm Keerthika, a passionate food enthusiast dedicated to sharing delightful recipes and stories. I love exploring new flavors and connecting with food lovers worldwide.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="your-photo.jpg" class="img-fluid rounded" alt="Keerthika's Photo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Blog Posts Section -->
+    <section id="latest-posts" class="mb-5">
+        <h2>Latest Posts</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="salad.jpg" class="card-img-top" alt="Salad">
+                    <div class="card-body">
+                        <h5 class="card-title">Healthy Salads for Every Day</h5>
+                        <p class="card-text">A refreshing guide to a healthy lifestyle.</p>
+                        <a href="Salad_recipes.html" class="btn btn-primary">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="breakfast.jpg" class="card-img-top" alt="Breakfast">
+                    <div class="card-body">
+                        <h5 class="card-title">10 Quick & Easy Breakfast Ideas</h5>
+                        <p class="card-text">Start your day with energy-packed meals.</p>
+                        <a href="#" class="btn btn-primary">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Recipes Section -->
+    <section id="popular-recipes" class="mb-5">
+        <h2>Popular Recipes</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="avocado-toast.jpg" class="card-img-top" alt="Avocado Toast">
+                    <div class="card-body">
+                        <h5 class="card-title">Avocado Toast with Poached Eggs</h5>
+                        <a href="Avocado_toast.html" class="btn btn-primary">View Recipe</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="oats.jpg" class="card-img-top" alt="Overnight Oats">
+                    <div class="card-body">
+                        <h5 class="card-title">Overnight Oats with Berries</h5>
+                        <a href="Overnight_oats.html" class="btn btn-primary">View Recipe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="mb-5">
+        <h2>Contact Me</h2>
+        <form action="submit_subscription.php" method="POST" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+                <div class="invalid-feedback">
+                    Please enter your name.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+                <div class="invalid-feedback">
+                    Please enter a valid email address.
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+    </section>
+
+</main>
+
+<!-- Footer Section -->
+<footer class="bg-dark text-white text-center py-4">
+    <p>&copy; <script>document.write(new Date().getFullYear())</script> KK's Food Blog. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Bootstrap Form Validation
+    (function () {
+        'use strict'
+        var forms = document.querySelectorAll('.needs-validation')
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+</script>
+
+</body>
+</html>
